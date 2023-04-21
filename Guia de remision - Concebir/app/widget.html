@@ -1,0 +1,470 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://live.zwidgets.com/js-sdk/1.1/ZohoEmbededAppSDK.min.js"></script>
+
+    <title>GUIA DE REMISION REMITENTE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+        crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <div id="marco-captura">
+            <div class="parte-superior container mt-5">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <!--<td rowspan="5" colspan="2" width="33%"><img src="/app/img/logoOxigeno.PNG" alt="" srcset="">-->
+                                <td rowspan="5" colspan="2" width="33%"><img src="https://www.linkpicture.com/q/logoOxigeno.png" alt="" srcset="">
+                            </td>
+                            <td width="31%" colspan="4" style="background-color: rgb(231, 230, 230);text-align:center;font-size: xx-large">
+                                <strong>R.U.C N° 2025435532</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td width="31%" colspan="4" style="background-color: rgb(255, 255, 255);text-align:center;font-size: xx-large">
+                                <strong>GUIA DE REMISION REMITENTE</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="numeroSerie" placeholder="NUMERO DE SERIE">
+
+                                <!-- <div class="d-flex justify-content-between">
+                                    <label for="exampleRadios1"
+                                        class="form-check-label">HDP</label> <input type="text" class="borde-focus border-0"
+                                        id="exampleRadios1" value="HDP" class="form-check-input"></div> -->
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="numeroGuia" aria-describedby="numero"
+                                    placeholder="NUMERO DE LA GUIA">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="parte-superior container mt-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>FECHA:</td>
+                                        <td><input type="date" class="form-control" id="fecha" aria-describedby="fecha"
+                                                placeholder="Ingrese Fecha"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre y Apellido
+                                            <br>
+                                            del Transportista:
+                                        </td>
+                                        <td>
+                                            <select class="form-select" id="nombre" aria-describedby="nombre">
+                                                <option selected>Ingrese Nombre</option>
+                                                <option value="1">Eddy Palomino Diaz</option>
+                                                <option value="2">Cristhian Larrea Carerra</option>
+                                                <option value="3">Richard Carlos Aquino Pari</option>
+                                            </select>
+                                            <!-- <input type="text" class="form-control" id="nombre"
+                                                aria-describedby="nombre" placeholder="Ingrese Nombre"> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Destinatario:</td>
+                                        <td><input type="text" class="form-control" id="destinatario"
+                                                aria-describedby="destinatario" placeholder="Ingrese Destinatario"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Punto de Llegada:</td>
+                                        <td><input type="text" class="form-control" id="punto_llegada"
+                                                aria-describedby="punto_llegada" placeholder="Ingrese Punto de llegada">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-6">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Punto de Partida:</td>
+                                        <td colspan="3"><output type="text" class="form-control"
+                                                placeholder="Ingrese Punto de Partida">Av. Republica de Panama 5603 - Miraflores - Lima</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marca y Placa:</td>
+                                        <td><input type="text" class="form-control" id="marca_y_placa"
+                                                aria-describedby="marca_y_placa" placeholder="Ingrese Marca y Placa">
+                                        </td>
+                                        <td>Lic.Conducir:</td>
+                                        <td><input type="text" class="form-control" id="licencia"
+                                                aria-describedby="licencia" placeholder="Ingrese Lic.Conducir"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Codigo:</td>
+                                        <td><input type="text" class="form-control" id="codigo"
+                                                aria-describedby="codigo" placeholder="Ingrese Codigo"></td>
+                                        <td>R.U.C:</td>
+                                        <td><input type="text" class="form-control" id="ruc" aria-describedby="ruc"
+                                                placeholder="Ingrese R.U.C"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="parte-superior container mt-5">
+                    <tr class="color-cabeceras">
+                        <hr>
+                        <th colspan="6" class="text-center"><strong>MOTIVO DEL TRASLADO</strong></th>
+                    </tr>
+                    <div class="row">
+                        <div class="col-3">
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Venta</label>
+                                    <input type="checkbox" id="venta" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Compra</label>
+                                    <input type="checkbox" id="compra" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Consignacion</label>
+                                    <input type="checkbox" id="consignacion" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Venta con entrega<br> a terceros</label>
+                                    <input type="checkbox" id="venta_entrega" class="form-check-input">
+                                </div>
+                            </tr>
+                        </div>
+
+                        <div class="col-3">
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Venta sujeta a confirmacion <br>por el
+                                        comprador</label>
+                                    <input type="checkbox" id="venta_confirmacion" class="form-check-input">
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Traslado entre establecimientos <br> de la misma
+                                        empresa</label>
+                                    <input type="checkbox" id="traslado" class="form-check-input">
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Devolucion</label>
+                                    <input type="checkbox" id="devolucion" class="form-check-input">
+                                </div>
+                            </tr>
+                        </div>
+
+                        <div class="col-3">
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Recojo de bienes</label>
+                                    <input type="checkbox" id="recojo" class="form-check-input">
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Importacion</label>
+                                    <input type="checkbox" id="importacion" class="form-check-input">
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Exportacion</label>
+                                    <input type="checkbox" id="exportacion" class="form-check-input">
+                                </div>
+                            </tr>
+                        </div>
+                        <div class="col-3">
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Traslado zona primaria</label>
+                                    <input type="checkbox" id="traslado_primario" class="form-check-input">
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Traslado por emisor inherente</label>
+                                    <input type="checkbox" id="traslado_emisor" class="form-check-input">
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Traslado de bienes <br>para transformación</label>
+                                    <input type="checkbox" id="traslado_bienes" class="form-check-input">
+                                </div>
+                            </tr>
+                        </div>
+                        <div class="col">
+                            <tr>
+                                <br>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">Otros(especificar):</label>
+                                    <td><input type="text" class="form-control" id="otro"
+                                            placeholder="Ingresa los otros motivos del Traslado"></td>
+                                </div>
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+                <div class="parte-superior container mt-5">
+                    <tr class="color-cabeceras">
+                        <hr>
+                        <th colspan="6" class="text-center"><strong>DISPOSITIVOS CLINICOS</strong></th>
+                    </tr>
+                    <div class="row">
+                        <div class="col-4">
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">ASPIRADOR</label>
+                                    <input type="checkbox" id="aspirador" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">CAMA ELECTRICA</label>
+                                    <input type="checkbox" id="cama_electrica" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">CAMA MANUAL</label>
+                                    <input type="checkbox" id="cama_manual" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">CANULA</label>
+                                    <input type="checkbox" id="canula" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">CARRETILLA</label>
+                                    <input type="checkbox" id="carretilla" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">COLCHON ANTIESCA</label>
+                                    <input type="checkbox" id="colchon_antiesca" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">CONCENTRADOR</label>
+                                    <input type="checkbox" id="concentrador" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">FRASCO HUMEDE</label>
+                                    <input type="checkbox" id="frasco_humede" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">LLAVE</label>
+                                    <input type="checkbox" id="llave" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">MASC CON NEBUL</label>
+                                    <input type="checkbox" id="masc_con_nebul" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">PORTASUERO</label>
+                                    <input type="checkbox" id="portasuero" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">REGULADOR</label>
+                                    <input type="checkbox" id="regulador" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">TUERCA NIPLE</label>
+                                    <input type="checkbox" id="tuerca_niple" class="form-check-input">
+                                </div>
+                            </tr>
+
+                            <tr>
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-check-label">OTROS</label>
+                                    <br>
+                                    <input type="text" class="form-control" id="otro2">
+                                </div>
+                            </tr>
+                        </div>
+                        <div class="col-8">
+                            <table class="table table-bordered">
+                                <tr class="color-cabeceras">
+                                    <th colspan="8" class="text-center"><strong>SELECCIONE EL TIPO DE OXIGENO</strong>
+                                    </th>
+                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4">
+                                            <label class="form-check-label">EQ. OXIGENO(6M3)</label>
+                                            <input type="checkbox" id="oxigeno6m3" class="form-check-input">
+                        </div>
+                        </td>
+                        <td>
+                            <label class="form-check-label">EQ. OXIGENO(2M3)</label>
+                            <input type="checkbox" id="oxigeno2m3" class="form-check-input">
+                    </div>
+                    </td>
+                    <td>
+                        <label class="form-check-label">EQ. OXIGENO PORTATIL</label>
+                        <input type="checkbox" id="oxigeno_portatil" class="form-check-input">
+                </div>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                <table class="table table-bordered">
+                    <tr class="color-cabeceras">
+                        <th colspan="8" class="text-center"><strong>ESTADO DEL OXIGENO</strong></th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" rowspan="5">
+                                <label class="form-check-label">CILINDRO</label>
+                            </td>
+                            <td>
+                                <label class="form-check-label">LLENOS</label>
+                            </td>
+                            <td>
+                                <label class="form-check-label">VACIOS</label>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" rowspan="5">
+                                <label class="form-check-label">CODIGO</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="llenos" aria-describedby="llenos"
+                                    placeholder="Ingrese informacion">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="vacios" aria-describedby="vacios"
+                                    placeholder="Ingrese informacion">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr> <br>
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <H3><span><strong>INFORMACION ADICIONAL</strong></span></H3>
+            </div>
+        </div>
+    </section>
+    </div> <br>
+    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div>
+                <div class="form-group"><textarea name="" id="observacion" cols="30" rows="10" placeholder="Observaciones"
+                        class="form-control"></textarea></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <!-- <button type="submit" onclick="actualizar()" class="btn btn-success">Enviar </button> -->
+
+        <!-- <button type="submit" onclick="cerrar()" class="btn btn-danger">Cancelar </button> -->
+    </div>
+    <br>
+    <br>
+
+    <div id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="exampleModalLabel" class="modal-title">Error</h5> <button type="button"
+                        data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    Ha ocurrido un error
+                </div>
+                <div class="modal-footer"><button type="button" data-bs-dismiss="modal"
+                        class="btn btn-secondary">Close</button></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+        <script src="./widget.js"></script>
+    <script>
+        // $(function () {
+        //     initZSDK();
+        // });
+    </script>
+
+</body>
+
+</html>

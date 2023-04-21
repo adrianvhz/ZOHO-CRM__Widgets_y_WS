@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container mt-4 border">
+      <div class="row">
+        <div class="col-12 my-3 mb-2">
+          <h3 class="text-center">Visibilidad de partidas</h3>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
+      <div class="container text-center mb-3">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <label>DNI</label>
+          </div>
+          <div class="col-md-auto">
+            <input class="form-control-sm-2 border border-gray border-opacity-30 p-1 rounded" id="DNI"  name="DNI" disabled>
+          </div>
+          <div class="col-md-auto">
+            <label>Código SAP</label>
+          </div>
+          <div class="col-md-auto">
+            <input class="form-control-sm-2 border border-gray border-opacity-30 p-1 rounded" id="codigo"  name="codigo" disabled>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">PARTIDA</th>
+              <th scope="col">BUKRS</th>
+              <th scope="col">BELNR</th>
+              <th scope="col">GJAHR</th>
+              <th scope="col">PSPHI</th>
+              <th scope="col">POSNR</th>
+              <th scope="col">DMBTR</th>
+              <th scope="col">DMBE2</th>
+              <th scope="col">PSWSL</th>
+              <th scope="col">ZFBDT</th>
+              <th scope="col">STATUS</th>
+              <th scope="col">BLART</th>
+              <th scope="col">LTEXT</th>
+              <th scope="col">SGTXT</th>
+              <th scope="col">Checklist</th>
+            </tr>
+          </thead>
+          <!-- <tbody id="data" class="text-center">
+          </tbody> -->
+          <tbody id="data">
+            <tr class="text-center">
+              <td colspan="14"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- total input -->
+      <div class="d-flex justify-content-around my-3">
+        <div class="d-flex align-items-center">
+          <label>Total:&nbsp;</label>
+          <input class="form-control-sm-2 border border-gray border-opacity-30 p-1 rounded" id="importe-total" placeholder="Importe Total">
+        </div>
+        <div></div>
+      </div>
+      <!-- buttons -->
+      <div class="container mb-3">
+        <div class="text-center">
+          <button id="back-btn" class="btn btn-sm btn-secondary me-md-2" type="button">Regresar</button>
+          <button id="generar-btn" class="btn btn-sm btn-success me-md-2" type="button">Generar</button>
+        </div>
+      </div>
+      <!-- Toast (alert msg) -->
+      <div class="toast-container position-fixed p-3 top-0 end-0">
+        <div id="liveToast" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">
+              Cash generado correctamente
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+
+    </div>    
+     <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--llamamos al sdk de zoho-->
+    <script src="https://live.zwidgets.com/js-sdk/1.1/ZohoEmbededAppSDK.min.js"></script>
+    <!-- referenciamos a widget.js -->
+    <script src="widget.js"></script>
+  </body>
+</html>

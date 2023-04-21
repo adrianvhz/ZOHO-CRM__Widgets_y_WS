@@ -1,0 +1,252 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
+
+body {
+	width: 9.5in;
+	height: 11in;
+	margin: auto;
+	font-family: "Roboto";
+	font-style: normal;
+	-webkit-print-color-adjust: exact !important;
+	print-color-adjust: exact !important
+}
+
+#app {
+	padding: 20px;
+	display: flex;
+	flex-direction: column
+}
+
+#app .send_mail {
+	display: flex;
+	justify-content: end
+}
+
+#app .send_mail__button {
+	margin: 10px 0;
+	background-color: #0066e3;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	display: flex;
+	gap: 5px
+}
+
+#app .header {
+	display: flex;
+	justify-content: space-between
+}
+
+#app .header__logo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center
+}
+
+#app .header__address {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	line-height: 22px;
+	font-size: 14px;
+	padding-top: 30px
+}
+
+#app .header__address span:first-of-type {
+	font-weight: bold
+}
+
+#app .separator {
+	display: flex;
+	justify-content: center;
+	margin: 25px 0
+}
+
+#app .separator::after,
+#app .separator::before {
+	content: " ";
+	width: 42%;
+	border-top: 1px solid #ccc;
+	margin: auto
+}
+
+#app .separator::after {
+	margin-right: 0
+}
+
+#app .separator::before {
+	margin-left: 0
+}
+
+#app .separator span {
+	text-transform: uppercase
+}
+
+#app .transaction__client {
+	display: flex;
+	justify-content: space-between
+}
+
+#app .transaction__client__name {
+	display: flex;
+	flex-direction: column;
+	gap: 10px
+}
+
+#app .transaction__client__name div:last-of-type {
+	font-weight: bold
+}
+
+#app .transaction__client__contact {
+	display: flex;
+	flex-direction: column
+}
+
+#app .transaction__client__contact__item {
+	display: flex
+}
+
+#app .transaction__client__contact__item__label,
+#app .transaction__client__contact__item__content {
+	width: 165px;
+	padding: 7px 10px;
+	border: 1px solid #ece7e7
+}
+
+#app .transaction__client__contact__item__label:first-of-type,
+#app .transaction__client__contact__item__content:first-of-type {
+	border-bottom: 0
+}
+
+#app .transaction__client__contact__item__label {
+	background: #eff0f1
+}
+
+#app .transaction__invoice__header {
+	display: grid;
+	grid-template-columns: 5% 47% 15% 15% 18%;
+	background: #eff0f1;
+	margin-top: 50px
+}
+
+#app .transaction__invoice__header__col {
+	padding: 10px;
+	border: 1px solid #ece7e7
+}
+
+#app .transaction__invoice__body {
+	width: 100%;
+	border: 1px solid #ece7e7
+}
+
+#app .transaction__invoice__body .item {
+	display: grid;
+	grid-template-columns: 5% 47% 15% 15% 18%
+}
+
+#app .transaction__invoice__body .item .col {
+	border-left: 1px solid #ece7e7;
+	padding: 20px 10px
+}
+
+#app .transaction__invoice__body .item__description {
+	display: flex;
+	gap: 15px
+}
+
+#app .transaction__invoice__body .item__description__image {
+	width: 60px;
+	height: 80px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	padding: 5px;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .05)
+}
+
+#app .transaction__invoice__body .item__description__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+
+#app .transaction__invoice__body .item__description__text {
+	display: flex;
+	flex-direction: column;
+	line-height: 22px
+}
+
+#app .transaction__invoice__body .item__description__text--sub,
+#app .transaction__invoice__body .item__description__text--foot {
+	color: #787878
+}
+
+#app .transaction__invoice__body .item__amount {
+	display: flex;
+	flex-direction: column
+}
+
+#app .transaction__invoice__body .item__amount span:last-of-type {
+	color: #787878
+}
+
+#app .transaction__tax {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px
+}
+
+#app .transaction__tax__info {
+	display: flex;
+	flex-direction: column;
+	line-height: 22px;
+	padding-left: 20px
+}
+
+#app .transaction__tax__info span:first-of-type {
+	margin-bottom: 20px
+}
+
+#app .transaction__tax__total {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px
+}
+
+#app .transaction__tax__total__item {
+	display: flex;
+	justify-content: space-between
+}
+
+#app .transaction__tax__total__item__label,
+#app .transaction__tax__total__item__amount {
+	width: 140px
+}
+
+#app .terms-conditions {
+	display: flex;
+	flex-direction: column;
+	line-height: 22px;
+	margin-top: 50px
+}
+
+#app .terms-conditions span:first-of-type {
+	margin-bottom: 20px
+}
+
+.text-center {
+	text-align: center
+}
+
+.text-right {
+	text-align: right
+}
+
+.text-left {
+	text-align: left
+}
